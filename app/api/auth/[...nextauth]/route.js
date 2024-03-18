@@ -10,7 +10,7 @@ export const authOptions = {
         authorization: { params: { scope: "openid email profile" } },
         idToken: true,
         clientId: `${process.env.NEXTAUTH_CLIENT_ID}`,
-        clientSecret: "<Descope Access Key>",
+        clientSecret: `${process.env.NEXTAUTH_SECRET}`,
         checks: ["pkce", "state"],
         profile(profile) {
             return {
